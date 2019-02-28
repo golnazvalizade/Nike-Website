@@ -8,3 +8,4 @@ npm:
 npm install jquery
 ```
 
+![IMG](./image/scr.jpg)
