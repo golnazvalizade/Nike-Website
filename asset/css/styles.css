@@ -1,0 +1,403 @@
+@import url("./all.css");
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+*,
+*::after,
+*::before,
+html,
+body {
+    box-sizing: border-box;
+}
+
+body {
+    -ms-overflow-style: scrollbar;
+    -webkit-text-size-adjust: none;
+}
+
+header,
+section,
+footer,
+aside,
+article,
+menu,
+nav {
+    display: block;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Raleway',
+        'Source Sans Pro',
+        sans-serif;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.menu-toggle {
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    z-index: 999;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    display: none;
+}
+
+.menu-toggle i,
+.fa-times {
+    font-size: 3.5rem;
+}
+
+.fa-times {
+    display: none;
+    cursor: pointer;
+}
+
+nav {
+    border-bottom: solid 1px rgba(0, 0, 0, .075);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1000;
+}
+
+.logo {
+    width: 5rem;
+    padding-left: 3rem;
+    box-sizing: content-box;
+}
+
+nav ul {
+    display: flex;
+    height: 8rem;
+    list-style: none;
+    font-size: 1.6rem;
+}
+
+nav ul li {
+    line-height: 8rem;
+    padding: 0 3rem;
+    transition: background-color .5s ease-out;
+}
+
+nav ul li:hover {
+    background-color: rgba(0, 0, 0, .075);
+}
+
+.nav-middle {
+    margin-left: -22rem;
+}
+
+.nav-right li {
+    border-right: solid 1px rgba(0, 0, 0, .075);
+}
+
+.nav-right li:last-child {
+    border-right: none;
+}
+
+.nav-right li:nth-child(1) {
+    border-left: solid 1px rgba(0, 0, 0, .075);
+}
+
+.nav-right i {
+    margin-right: 1rem;
+}
+
+.nav-right .fa-search {
+    margin-right: 0;
+}
+
+.main {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+}
+
+.tone-1 {
+    background-color: #f7f7f6;
+    flex: 1;
+    height: 100vh;
+}
+
+.tone-2 {
+    background-color: #ffdfe6;
+    position: relative;
+    flex: 1;
+    height: 100vh;
+}
+
+.tone-2 img {
+    width: 110%;
+    position: relative;
+    left: -15rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.product-info h1 {
+    font-size: 5rem;
+    font-weight: 100;
+    margin-bottom: 1rem;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.product-info p {
+    font-size: 1.8rem;
+    margin-bottom: 4rem;
+}
+
+.product-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 5rem;
+}
+
+.btn {
+    padding: 2rem;
+    transition: transform .5s ease-out;
+    font-size: 1.5rem;
+    font-weight: 900;
+    display: flex;
+    color: #f7f7f6;
+}
+
+.info-btns {
+    display: flex;
+}
+
+.discover-btn {
+    background-color: #a4a4a4;
+}
+
+.cart-btn {
+    background-color: #141110;
+}
+
+.discover-btn:hover,
+.cart-btn:hover {
+    box-shadow: 3px 1rem 3rem rgba(0, 0, 0, .3);
+    transform: translateY(-1rem);
+}
+
+@media screen and (max-width: 1280px) {
+    .tone-2 img {
+        left: -9rem;
+    }
+
+    .nav-middle {
+        margin-left: -19.9rem;
+    }
+
+    nav ul li {
+        padding: 0 2rem;
+    }
+
+    .product-info h1 {
+        font-size: 3.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .product-info p {
+        font-size: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .product-info h2 {
+        font-size: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .btn {
+        padding: 1.5rem;
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 980px) {
+
+    .tone-2 img {
+        left: -6rem;
+    }
+
+    .nav-middle {
+        margin-left: -14.5rem;
+    }
+
+    .logo {
+        padding-left: 1.5rem;
+    }
+
+    .product-info h1 {
+        font-size: 3rem;
+        letter-spacing: 2px;
+        margin-bottom: 3rem;
+    }
+
+    nav ul {
+        height: 6rem;
+        font-size: 1.3rem;
+    }
+
+    nav ul li {
+        line-height: 6rem;
+        padding: 0 1rem;
+    }
+}
+
+@media screen and (max-width: 736px) {
+
+    .tone-2 img {
+        left: -3rem;
+    }
+
+    .product-info p {
+        margin-bottom: 5rem;
+    }
+
+    .btn {
+        padding: 1rem;
+
+    }
+
+    .nav-middle {
+        margin-left: 0;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 32rem;
+        height: 100vh;
+        background-color: #f7f7f6;
+        transform: translateX(-32rem);
+        transition: transform .5s ease-out;
+        border-bottom: none
+    }
+
+    nav ul {
+        display: block;
+        height: inherit;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    nav ul li {
+        line-height: inherit;
+        padding: 0;
+        margin-bottom: 2rem;
+    }
+
+    .nav-right ul li,
+    .nav-right ul li:nth-child(1) {
+        border: none;
+    }
+
+    .logo {
+        padding: 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .active {
+        transform: translateX(0);
+    }
+
+    .fa-times {
+        display: flex;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    .overlay {
+        background-color: rgba(0, 0, 0, .7);
+        position: absolute;
+        z-index: 998;
+        width: 0;
+        height: 100vh;
+        opacity: 0;
+        transition: opacity .5s ease-out;
+    }
+
+    .overlay.menu-open {
+        width: 100%;
+        opacity: 1;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .tone-2 img {
+        left: -3rem;
+    }
+
+    .product-info h1 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .product-info p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .product-info h2 {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .btn {
+        padding: .7rem;
+        font-size: .8rem;
+    }
+
+}
